@@ -1,4 +1,8 @@
 {
-	"python.formatting.provider": "autopep8",
-	"python.analysis.extraPaths": ["."],
+  "python.formatting.provider": "autopep8",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "...": "your other settings",
+  "python.analysis.extraPaths": ["."],
+  "cSpell.words": ["Olamide"]
 }

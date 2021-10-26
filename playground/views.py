@@ -6,11 +6,10 @@ from django.core.exceptions import ObjectDoesNotExist
 from store.models import Product, OrderItem
 
 
+from django.db.models import Q, F
+
 def say_hello(request):
-    query_set = Product.objects.filter(Q(inventory__lt=10) & ~Q(unit_price__lt=20)) # & => AND
-
-    query_set = Product.objects.filter(Q(inventory__lt=10) | ~Q(unit_price__lt=20)) # | => OR
-
+    query_set = Product.objects.filter(inventory=F('collection__id'))
 
 
     context = {"name": "Olamide", "products": list()}
